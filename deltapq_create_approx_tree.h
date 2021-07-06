@@ -41,7 +41,7 @@ extern int dim; // dimension default is 128
 long long int global_diff_sum = 0;
 struct DummyNodes {
     int m = 8;
-    uint size;
+    uint size = 0;
     vector<uint> ids;   // vector ids
 
     void push_back(uint node_id) {
@@ -1293,7 +1293,7 @@ void find_edges_by_diff_approx(const string &dataset_path, const uchar* codes,
         finalists.push_back(dummy_nodes.ids[0]);    // there will only be 1 node left
     }
     // handle the roots with height of MAX_HEIGHT - 2
-    cout << "finalists size is " << finalists.size << "edges size " << edges.size() << endl;
+    cout << "finalists size is " << finalists.size << " edges size " << edges.size() << endl;
     if (finalists.size > 0) {
         uint parent_code_id = finalists.ids[0];
         root_id = parent_code_id;

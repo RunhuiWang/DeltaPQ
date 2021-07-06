@@ -5,7 +5,7 @@ CMakeCache*
 Makefile
 # C++ objects and libs
 pqtree
-deltapqtree
+deltapq
 
 *.slo
 *.lo
