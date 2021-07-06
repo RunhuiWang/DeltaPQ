@@ -13,5 +13,5 @@ SET(CMAKE_CXX_FLAGS "-std=c++11 -O3 -g -fopenmp -w")
 add_executable( pqtree main.cpp pq.cpp utils.cpp pq_tree.cpp pqbase.cpp) # find_edges.h required
 target_link_libraries( pqtree ${OpenCV_LIBS} )
 
-add_executable( deltapqtree deltapq_approx_tree_main.cpp pq.cpp utils.cpp pq_tree.cpp)
+add_executable( deltapq deltapq_approx_tree_main.cpp pq.cpp utils.cpp pq_tree.cpp)
 target_link_libraries( deltapqtree ${OpenCV_LIBS} )
