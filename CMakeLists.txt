@@ -14,4 +14,4 @@ add_executable( pqtree main.cpp pq.cpp utils.cpp pq_tree.cpp pqbase.cpp) # find_
 target_link_libraries( pqtree ${OpenCV_LIBS} )
 
 add_executable( deltapq deltapq_approx_tree_main.cpp pq.cpp utils.cpp pq_tree.cpp)
-target_link_libraries( deltapqtree ${OpenCV_LIBS} )
+target_link_libraries( deltapq ${OpenCV_LIBS} )
