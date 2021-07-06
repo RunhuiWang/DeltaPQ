@@ -1,7 +1,7 @@
 # DeltaPQ
 DeltaPQ: Lossless Product Quantization Code Compression for High Dimensional Similarity Search
 
-http://www.vldb.org/pvldb/vol13/p3603-wang.pdf
+Paper link : http://www.vldb.org/pvldb/vol13/p3603-wang.pdf
 
 ## How to compile
 
