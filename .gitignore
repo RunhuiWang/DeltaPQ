@@ -1,0 +1,69 @@
+build
+
+CMakeFiles*
+CMakeCache*
+Makefile
+# C++ objects and libs
+pqtree
+deltapqtree
+
+*.slo
+*.lo
+*.o
+*.a
+*.la
+*.lai
+*.so
+*.dll
+*.dylib
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.err
+*.app
+bin/*
+btree
+./on-disk/bptree
+pqgraph
+pqtree
+#temporal files
+*.tmp
+*tmp*
+indexEnum
+indexArray
+indexLinear
+PQDML
+convert
+
+tags
+
+.*
+MAP_OUTPUT
+
+cmake_install.cmake
