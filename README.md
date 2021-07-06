@@ -11,7 +11,7 @@ http://www.vldb.org/pvldb/vol13/p3603-wang.pdf
 
 2. Boost (required components: timer chrono system program_options)
 
-To compile
+###To compile
 ```
 cmake .
 make pqtree
