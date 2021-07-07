@@ -732,9 +732,9 @@ int main(int argc, char* argv[]){
         
         uchar* vecs;
         long N;
-        PQTree::Read(dataset+"/codes.bin.plain.M"+to_string(PQ_M)+"K"+
-                                to_string(PQ_K), vecs, N);
         if (NN != -1) N = NN;
+        PQTree::Read(dataset+"/codes.bin.plain.M"+to_string(PQ_M)+"K"+
+                                to_string(PQ_K) + "N" + to_string(N), vecs, N);
         cout << "N = " << N << endl;
         PQ pq(PQ::ReadCodewords(dataset + "/M"+to_string(PQ_M)+"K"+
                                 to_string(PQ_K)+"codewords.txt"));
