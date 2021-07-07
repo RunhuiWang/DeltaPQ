@@ -86,3 +86,25 @@ Example
           -query_size [SIZE]               // the number of queries to be performed
           -topk       [TOPK]               // topk
 ```
+Example
+```
+./deltapq -dataset /data/local/pqdata/sift/ -ext fvecs -task query -m 8 -k 256 -h 1 -diff 8 -N 89656 -query_size 10 -topk 10 -debug
+```
+### Generate Groundtruth Files
+Go to the dataset folder and 
+```
+mkdir groundtruth
+```
+Generate Groundtruth
+```
+./deltapq -dataset [path to the dataset folder] 
+          -ext     [file type]          // specify the input file type, either fvecs or bvecs 
+          -task groundtruth             // generate groundtruth
+          -query_size [SIZE]            // the number of queries to be performed
+          -topk       [TOPK]            // topk
+          -N       [number of vectors]  // specify the number of vectors to use
+```
+Example
+```
+./pqtree -dataset /data/local/pqdata/sift/ -ext fvecs -task groundtruth -topk 10000 -query_size 1000 -N 1000000
+```
