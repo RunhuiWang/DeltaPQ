@@ -251,12 +251,12 @@ int main(int argc, char* argv[]){
         string learn_set = dataset+"/learn."+ext;
         if (uni_sample == 1) learn_set = learn_set + ".unisample";
         vector<vector<float> > learns = ReadTopN( learn_set, ext, load_size);
-        for (int i = 0; i < 2; i ++) {
-            for (int j = 0; j < learns[i].size() ; j ++) {
-                cout << learns[i][j] << " ";
-            }
-            cout << endl;
-        }
+//        for (int i = 0; i < 2; i ++) {
+//            for (int j = 0; j < learns[i].size() ; j ++) {
+//                cout << learns[i][j] << " ";
+//            }
+//            cout << endl;
+//        }
         cout << "all vectors " << learns.size() << endl;
         //vector<vector<float> > learns = ReadTopN(dataset, ext, -1);
         __gnu_parallel::random_shuffle(learns.begin(), learns.end());
@@ -390,18 +390,18 @@ int main(int argc, char* argv[]){
         cout << n_codes << endl;
         N = n_codes;
         cout <<get_current_time_str() << endl;
-        // INFO
-        for (int i = 0; i < 10; i ++) {
-            for (int m = 0; m < PQ_M; m ++) {
-                if (PQ_K > 256) {
-                    int val = ((uint16_t*)codes)[(N-1-i)*PQ_M+m];
-                    cout << val << " ";
-                } else {
-                    cout << (int)codes[(N-1-i)*PQ_M+m] << " ";
-                }
-            }
-            cout << endl;
-        }
+//        // INFO
+//        for (int i = 0; i < 10; i ++) {
+//            for (int m = 0; m < PQ_M; m ++) {
+//                if (PQ_K > 256) {
+//                    int val = ((uint16_t*)codes)[(N-1-i)*PQ_M+m];
+//                    cout << val << " ";
+//                } else {
+//                    cout << (int)codes[(N-1-i)*PQ_M+m] << " ";
+//                }
+//            }
+//            cout << endl;
+//        }
         // INFO
         // (5) Write codes
         #ifdef PLAIN_PQ
@@ -454,10 +454,10 @@ int main(int argc, char* argv[]){
                 while (k == val) k = rand() % PQ_K;
                 vecs[i*PQ_M+selected_m] = k;
 
-                if (i < 10) {
-                    for (int m = 0; m < PQ_M; m ++) cout << (int)vecs[i*PQ_M+m] << " ";
-                    cout << endl;
-                }
+//                if (i < 10) {
+//                    for (int m = 0; m < PQ_M; m ++) cout << (int)vecs[i*PQ_M+m] << " ";
+//                    cout << endl;
+//                }
             }
         }
         if (NN != -1) N = NN;
@@ -583,12 +583,12 @@ int main(int argc, char* argv[]){
         }
         // Read query vectors
         vector<vector<float> > queries = ReadTopN(dataset + "/query." + ext, ext, query_size);
-        for (int i = query_size-2; i < query_size; i ++) {
-            for (int j = 0; j < queries[i].size() ; j ++) {
-                cout << queries[i][j] << " ";
-            }
-            cout << endl;
-        }
+//        for (int i = query_size-2; i < query_size; i ++) {
+//            for (int j = 0; j < queries[i].size() ; j ++) {
+//                cout << queries[i][j] << " ";
+//            }
+//            cout << endl;
+//        }
         queries.resize(query_size);
         // read partial raw data and find top_k neighbors part by part
         ItrReader reader(dataset+"/base."+ext, ext);

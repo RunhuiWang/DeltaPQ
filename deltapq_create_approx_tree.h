@@ -2796,7 +2796,7 @@ inline int get_byte_from_compressed_codes(uchar* buffer,
             int byte_read = read(fd_codes, buffer, 
                     BLKNBS);
             if (max_n_bytes - byte_offset < BLKNBS) {
-                cout << "The last block has size " << byte_read << endl;
+//                cout << "The last block has size " << byte_read << endl;
             }
         }
     }
@@ -2827,8 +2827,8 @@ void query_processing_scan_compressed_codes_opt_o_direct(
         cout << "scan only part of the codes " << num_codes << " / "
             << n_codes << endl;
     }
-    cout << "n_codes = " << n_codes << endl;
-    cout << "n_bytes = " << n_bytes << endl;
+//    cout << "n_codes = " << n_codes << endl;
+//    cout << "n_bytes = " << n_bytes << endl;
 //    cout << BLKNBITS<< endl;
     // calculate distance lookup table
     if (m_sub_distances == NULL) {
